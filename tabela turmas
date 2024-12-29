@@ -1,0 +1,21 @@
+CREATE TABLE Turmas (
+  id_turmas INT PRIMARY key,
+  nome_turma VARCHAR (50),
+  Ano_letivo INT,
+  professor_orientador INT,
+  FOREIGN KEY (professor_orientador) REFERENCES Disciplinas (professor_responsavel)
+  );
+  
+  INSERT INTO Turmas (
+   id_turmas,
+  nome_turma,
+  Ano_letivo,
+  professor_orientador)
+  VALUES
+('1', 'Turma A', '2023', '1'),
+('2', 'Turma B', '2023', '2'),
+('3', 'Turma C', '2023', '4'),
+('4', 'Turma D', '2023', '4'),
+('5', 'Turma E', '2023', '5');
+
+SELECT*from Turmas;
